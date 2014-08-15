@@ -30,14 +30,7 @@ matrix:
     - perl: "5.20"
       env: COVERAGE=1 TEST_PARTITION=4
   allow_failures:
-    - perl: "5.20"
-      env: COVERAGE=1 TEST_PARTITION=1
-    - perl: "5.20"
-      env: COVERAGE=1 TEST_PARTITION=2
-    - perl: "5.20"
-      env: COVERAGE=1 TEST_PARTITION=3
-    - perl: "5.20"
-      env: COVERAGE=1 TEST_PARTITION=4
+    - env: COVERAGE=1
 before_install:
   - git clone git://github.com/haarg/perl-travis-helper ~/perl-travis-helper
   - source ~/perl-travis-helper/init
