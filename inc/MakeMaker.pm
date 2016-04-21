@@ -14,6 +14,7 @@ override _build_MakeFile_PL_template => sub {
     my $tmpl = super();
     my $assert_compiler = <<'ASSERT_COMPILER';
 # Secondary compile testing via ExtUtils::HasCompiler
+use lib 'inc';
 use ExtUtils::HasCompiler 0.013 'can_compile_loadable_object';
 sub can_xs {
     return can_compile_loadable_object(quiet => 1) ? 1 : 0;
